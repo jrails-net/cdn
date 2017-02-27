@@ -1,0 +1,7 @@
+0:	from all lookup local 
+32766:	from all lookup main 
+32767:	from all lookup default 
+33000:	from 172.31.32.0/24 lookup table1 
+33000:	from all to 172.31.32.0/24 lookup table1 
+33000:	from 172.31.33.0/24 lookup table2 
+33000:	from all to 172.31.33.0/24 lookup table2 

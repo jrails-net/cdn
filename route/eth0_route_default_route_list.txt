@@ -1,0 +1,9 @@
+default via 172.31.16.1 dev eth0  metric 100 
+172.17.0.0/16 dev docker0  proto kernel  scope link  src 172.17.0.1 
+172.31.16.0/20 dev eth0  proto kernel  scope link  src 172.31.24.40 
+172.31.32.0/24 via 172.31.32.1 dev eth1 
+172.31.32.0/24 dev eth1  proto kernel  scope link  src 172.31.32.234 
+172.31.33.0/24 via 172.31.33.1 dev eth2 
+172.31.33.0/24 dev eth2  proto kernel  scope link  src 172.31.33.213 
+192.168.1.0/24 dev br1  proto kernel  scope link  src 192.168.1.1 
+192.168.2.0/24 dev br2  proto kernel  scope link  src 192.168.2.1 
