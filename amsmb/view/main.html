@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="apple-touch-icon" href="data:image/png;base64,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" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <!-- <meta name="apple-mobile-web-app-capable" content="yes"> -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>AMS</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="../Framework7-1.4.2/dist/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="../Framework7-1.4.2/dist/css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="css/my-app2.css">
+    <!-- Path to your custom app styles-->
+
+  </head>
+  <body>
+<div class="views">
+	<div id="view-main" class="view view-main" >
+	  <div class="pages">
+	  </div> 
+	</div>
+</div>
+ <div id="picker-date-container"></div>
+<script type="text/javascript" src="js/sugar.min.js"></script>
+<script type="text/javascript" src="../Framework7-1.4.2/dist/js/framework7.js"></script>
+<script src="../Template7-1.1.0/dist/template7.js"></script>
+<script type="text/javascript" src="js/my-app2.js"></script>
+<script type="text/javascript">
+var survey_tpl = get('../template/survey.tpl7.html',{});
+var catering_form_tpl = get('../template/catering-form.tpl7.html',{});
+var catering_item_tpl = get('../template/catering-item.tpl7.html',{});
+</script>
+<script id="navmenu-tpl" type="text/template7">
+    <div class="navbar bg-bar">
+	   <div class="navbar-inner">
+	      <div class="left">
+            <a href="#" class="link icon-only">
+                <i class="icon icon-logo"></i>
+            </a>
+          </div>
+		  <div class="center white">Home</div>
+   <div class="right">
+      <!--
+              <a href="#" class="link icon-only">
+                <i class="icon icon-logo"></i>
+              </a>
+      -->
+            </div>
+	     </div>
+    </div>
+    <div class="page-content content" >
+		<div class="list-block">
+			<ul>
+			<li class="swipeout acc">
+			  <div class="swipeout-content">
+			    <a href="#" class="item-content item-link">
+			      <div class="item-media"><i class="icon icon-f7"></i></div>
+			      <div class="item-inner">
+			        <div class="item-title">ACC</div>
+			     </div>
+			    </a>
+			  </div>
+			</li>
+			<li class="swipeout airfield">
+			  <div class="swipeout-content">
+			    <a href="#" class="airfield item-content item-link">
+			      <div class="item-media"><i class="icon icon-f7"></i></div>
+			      <div class="item-inner">
+			        <div class="item-title">Airfield</div>
+			     </div>
+			    </a>
+			  </div>
+			</li>
+			<li class="swipeout apron">
+			  <div class="swipeout-content">
+			    <a href="#" class="item-content item-link">
+			      <div class="item-media"><i class="icon icon-f7"></i></div>
+			      <div class="item-inner">
+			        <div class="item-title">Apron</div>
+			     </div>
+			    </a>
+			  </div>
+			</li>
+			<li class="swipeout discipline">
+			  <div class="swipeout-content">
+			    <a href="#" class="item-content item-link">
+			      <div class="item-media"><i class="icon icon-f7"></i></div>
+			      <div class="item-inner">
+			        <div class="item-title">Discipline</div>
+			     </div>
+			    </a>
+			  </div>
+			</li>
+			<li class="swipeout other">
+			  <div class="swipeout-content">
+			    <a href="#" class="item-content item-link">
+			      <div class="item-media"><i class="icon icon-f7"></i></div>
+			      <div class="item-inner">
+			        <div class="item-title">Other</div>
+			     </div>
+			    </a>
+			  </div>
+			</li>
+			</ul>
+		</div>
+    </div>
+</script>
+<script id="acc-tpl" type="text/template7">
+    <div class="navbar bg-bar">
+	   <div class="navbar-inner">
+	      <div class="left">
+            <a href="#" class="link icon-only">
+                <i class="icon icon-logo"></i>
+            </a>
+          </div>
+		  <div class="center white">ACC</div>
+          <div class="right">
+             <a href="#" class="link icon-only tab-link" data-tab="#navmenu-view"> <i class="icon icon-back"></i></a>
+            </div>
+	     </div>
+	     </div>
+    </div>
+    <div class="page-content content" >
+		<div class="list-block">
+			<ul>
+			<li class="swipeout">
+			  <div class="swipeout-content">
+			    <a href="#" class="item-content item-link">
+			      <div class="item-media"><i class="icon icon-f7"></i></div>
+			      <div class="item-inner">
+			        <div class="item-title">Runway in use</div>
+			        <div class="item-after"><span class="badge">5</span></div>
+			     </div>
+			    </a>
+			  </div>
+			  <div class="swipeout-actions-right">
+			    <a href="#" class="add_acc bg-orange">Add</a>
+			    <a href="#" class="search_acc">Search</a>
+			  </div>
+			</li>
+			<li class="swipeout">
+			  <div class="swipeout-content">
+			    <a href="#" class="item-content item-link">
+			      <div class="item-media"><i class="icon icon-f7"></i></div>
+			      <div class="item-inner">
+			        <div class="item-title">System Drill</div>
+			        <div class="item-after"><span class="badge">5</span></div>
+			     </div>
+			    </a>
+			  </div>
+			  <div class="swipeout-actions-right">
+			    <a href="#" class="add_airfield bg-orange">Add</a>
+			    <a href="#" class="search_airfield">Search</a>
+			  </div>
+			</li>
+			<li class="swipeout">
+			  <div class="swipeout-content">
+			    <a href="#" class="item-content item-link">
+			      <div class="item-media"><i class="icon icon-f7"></i></div>
+			      <div class="item-inner">
+			        <div class="item-title">Aircraft washing records</div>
+			        <div class="item-after"><span class="badge">5</span></div>
+			     </div>
+			    </a>
+			  </div>
+			  <div class="swipeout-actions-right">
+			    <a href="#" class="add_apron bg-orange">Add</a>
+			    <a href="#" class="search_apron">Search</a>
+			  </div>
+			</li>
+			<li class="swipeout">
+			  <div class="swipeout-content">
+			    <a href="#" class="item-content item-link">
+			      <div class="item-media"><i class="icon icon-f7"></i></div>
+			      <div class="item-inner">
+			        <div class="item-title">Airport Emergency record</div>
+			        <div class="item-after"><span class="badge">5</span></div>
+			     </div>
+			    </a>
+			  </div>
+			  <div class="swipeout-actions-right">
+			    <a href="#" class="add_discipline bg-orange">Add</a>
+			    <a href="#" class="search_discipline">Search</a>
+			  </div>
+			</li>
+			<li class="swipeout">
+			  <div class="swipeout-content">
+			    <a href="#" class="item-content item-link">
+			      <div class="item-media"><i class="icon icon-f7"></i></div>
+			      <div class="item-inner">
+			        <div class="item-title">Stand Utilization</div>
+			        <div class="item-after"><span class="badge">5</span></div>
+			     </div>
+			    </a>
+			  </div>
+			  <div class="swipeout-actions-right">
+			    <a href="#" class="add_other bg-orange">Add</a>
+			    <a href="#" class="search_other">Search</a>
+			  </div>
+			</li>
+			</ul>
+		</div>
+    </div>
+</script>  
+<script id="discipline-tpl" type="text/template7">
+    <div class="navbar bg-bar">
+	   <div class="navbar-inner">
+	      <div class="left">
+            <a href="#" class="link icon-only">
+                <i class="icon icon-logo"></i>
+            </a>
+          </div>
+		  <div class="center white">Discipline</div>
+          <div class="right">
+             <a href="#" class="link icon-only tab-link" data-tab="#navmenu-view"> <i class="icon icon-back"></i></a>
+            </div>
+	     </div>
+    </div>
+    <div class="page-content content" >
+		<div class="list-block">
+			<ul>
+			<li class="swipeout">
+			  <div class="swipeout-content">
+			    <a href="#" class="item-content item-link">
+			      <div class="item-media"><i class="icon icon-f7"></i></div>
+			      <div class="item-inner">
+			        <div class="item-title">Discipline</div>
+			        <div class="item-after"><span class="badge">5</span></div>
+			     </div>
+			    </a>
+			  </div>
+			  <div class="swipeout-actions-right">
+			    <a href="#" class="add_discipline bg-orange">Add</a>
+			    <a href="#" class="search_discipline">Search</a>
+			  </div>
+			</li>
+			</ul>
+		</div>
+    </div>
+</script>  
+<script id="discipline-form-tpl" type="text/template7">
+	<div class="navbar bg-bar">
+		<div class="navbar-inner">
+		    <div class="left">
+	            <a href="#" class="link icon-only">
+	                <i class="icon icon-logo"></i>
+	            </a>
+	        </div>
+			<div class="center white">Discipline</div>
+            <div class="right">
+                <a href="#" class="link icon-only tab-link" data-tab="#discipline-view"> <i class="icon icon-back"></i></a>
+            </div>
+		</div>
+	</div>
+	
+	<div class="page-content content" >
+	<div id="discipline" data-page="discipline">
+	<form id="input-form">
+				<div class="list-block">
+					<ul>
+						<li class="item-content">
+							<div class="item-inner">
+								<div class="item-title label">Record No.</div>
+								<div class="item-input">
+									<input type="text" name="record_no" class="record_no" placeholder="Record No." readonly/>
+								</div>
+							</div>
+						</li>
+						<li class="item-content">
+							<div class="item-inner">
+								<div class="item-title label">Date</div>
+								<div class="item-input">
+									<input type="text" name="ocurrence_date" class="ocurrence_date" placeholder="Ocurrence Date" />
+								</div>
+							</div>
+						</li>
+						<li class="item-content">
+							<div class="item-inner">
+								<div class="item-title label">Time</div>
+								<div class="item-input">
+									<input type="text" name="ocurrence_time" class="ocurrence_time" placeholder="Ocurrence Time" />
+								</div>
+							</div>
+						</li>
+						<li class="item-content">
+							<div class="item-inner">
+								<div class="item-title label">HKID</div>
+								<div class="item-input">
+									<input type="text" name="hkid" class="hkid"
+										placeholder="e.g. P123456(1)" />
+								</div>
+							</div>
+						</li>
+						<li class="item-content">
+							<div class="item-inner">
+								<div class="item-title label">First Name</div>
+								<div class="item-input">
+									<input type="text" name="first_name" class="first_name"
+										placeholder="First Name" />
+								</div>
+							</div>
+						</li>
+						<li class="item-content">
+							<div class="item-inner">
+								<div class="item-title label">Last Name</div>
+								<div class="item-input">
+									<input type="text" name="last_name" class="last_name"
+										placeholder="Last Name" />
+								</div>
+							</div>
+						</li>
+						<li class="item-content">
+							<div class="item-inner">
+								<div class="item-title label">AVL No.</div>
+								<div class="item-input">
+									<input type="text" name="avl_no-input" class="avl_no"
+										placeholder="AVL No." />
+								</div>
+							</div>
+						</li>
+			            <li class="item-content">
+							<div class="item-inner">
+								<div class="item-title label">Attachment</div>
+								<div class="item-input">
+									<input type="file" name="attachment" class="attachment" />
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="list-block">
+					<a href="#" class="button button-fill color-teal save">Save</a>
+				</div>
+			</form>
+	</div>
+	</div>
+</script>
+<script id="discipline-list-tpl" type="text/template7">
+ <div class="navbar bg-bar">
+    <div class="navbar-inner">
+    <div class="left">
+           <a href="#" class="link icon-only">
+               <i class="icon icon-logo"></i>
+           </a>
+       </div>
+      <div class="center white">Discipline</div>
+      <div class="right">
+             <a href="#" class="link icon-only tab-link" data-tab="#discipline-view"> <i class="icon icon-back"></i></a>
+      </div>
+    </div>
+</div>
+
+<div class="page-content pull-to-refresh-content" >
+  <div class="pull-to-refresh-layer">
+    <div class="preloader"></div>
+    <div class="pull-to-refresh-arrow"></div>
+  </div>
+
+  <div class="list-block media-list">
+    <ul>
+    </ul>
+    <div class="list-block-label">
+      <p>Just pull page down to let the magic happen.</p>
+    </div>
+  </div>
+  
+</div> 
+</script>
+
+<script id="discipline-loop-tpl" type="text/template7">
+{{#each list}}
+<li><a class="item-link item-content tab-link"
+	onclick="" >
+		<div class="item-media">
+			<img src={{icon}} width="44" />
+		</div>
+		<div class="item-inner">
+			<div class="item-title-row">
+				<div class="item-title">{{record_no}}</div>
+                <div class="item-after"><span class="badge">{{status}}</span></div>
+			</div>
+			<div class="item-subtitle">{{hkid}}</div>
+		</div>
+</a></li>
+{{/each}}
+</script>
+
+<script id="high_power_engine_run_records-loop-tpl" type="text/template7">
+{{#each list}}
+<li><a class="item-link item-content tab-link"
+	onclick="" >
+		<div class="item-media">
+			<img src={{icon}} width="44" />
+		</div>
+		<div class="item-inner">
+			<div class="item-title-row">
+				<div class="item-title">{{record_no}}</div>
+                <div class="item-after"><span class="badge">{{status}}</span></div>
+			</div>
+			<div class="item-subtitle">{{engineer_permit_no}}</div>
+		</div>
+</a></li>
+{{/each}}
+</script>
+
+<script id="airfield-tpl" type="text/template7">
+    <div class="navbar bg-bar">
+	   <div class="navbar-inner">
+	      <div class="left">
+            <a href="#" class="link icon-only">
+               <i class="icon icon-logo"></i>
+           </a>
+          </div>
+		  <div class="center white">Airfield</div>
+          <div class="right">
+             <a href="#" class="link icon-only tab-link" data-tab="#navmenu-view"> <i class="icon icon-back"></i></a>
+            </div>
+	     </div>
+    </div>
+    <div class="page-content content" >
+        <div class="content-block-title">Daily</div>
+		<div class="list-block">
+			<ul>
+            <li class="swipeout airfield_inspection">
+			  <div class="swipeout-content">
+			    <a href="#" class="item-content item-link">
+			      <div class="item-media"><i class="icon icon-f7"></i></div>
+			      <div class="item-inner">
+			        <div class="item-title">Airfield Inspection</div>
+			        <div class="item-after"><span class="badge">5</span></div>
+			     </div>
+			    </a>
+			  </div>
+			  <div class="swipeout-actions-right">
+			    <a href="#" class="add_action bg-orange">Add</a>
+			    <a href="#" class="search_action">Search</a>
+			  </div>
+			 </li>
+            <li class="swipeout airfield_monitoring">
+			  <div class="swipeout-content">
+			    <a href="#" class="item-content item-link">
+			      <div class="item-media"><i class="icon icon-f7"></i></div>
+			      <div class="item-inner">
+			        <div class="item-title">Airfield Works Monitoring</div>
+			        <div class="item-after"><span class="badge">5</span></div>
+			     </div>
+			    </a>
+			  </div>
+			  <div class="swipeout-actions-right">
+			    <a href="#" class="add_action bg-orange">Add</a>
+			    <a href="#" class="search_action">Search</a>
+			  </div>
+			 </li>
+            <li class="swipeout apron_cleanliness_inspection">
+			  <div class="swipeout-content">
+			    <a href="#" class="item-content item-link">
+			      <div class="item-media"><i class="icon icon-f7"></i></div>
+			      <div class="item-inner">
+			        <div class="item-title">Apron Cleanliness Inspection</div>
+			        <div class="item-after"><span class="badge">5</span></div>
+			     </div>
+			    </a>
+			  </div>
+			  <div class="swipeout-actions-right">
+			    <a href="#" class="add_action bg-orange">Add</a>
+			    <a href="#" class="search_action">Search</a>
+			  </div>
+			 </li>
+            <li class="swipeout bird_observation_and_ammunition">
+			  <div class="swipeout-content">
+			    <a href="#" class="item-content item-link">
+			      <div class="item-media"><i class="icon icon-f7"></i></div>
+			      <div class="item-inner">
+			        <div class="item-title">Bird Observation and Ammunition</div>
+			        <div class="item-after"><span class="badge">5</span></div>
+			     </div>
+			    </a>
+			  </div>
+			  <div class="swipeout-actions-right">
+			    <a href="#" class="add_action bg-orange">Add</a>
+			    <a href="#" class="search_action">Search</a>
+			  </div>
+			 </li>
+            <li class="swipeout high_power_engine_run_records">
+			  <div class="swipeout-content">
+			    <a href="#" class="item-content item-link">
+			      <div class="item-media"><i class="icon icon-f7"></i></div>
+			      <div class="item-inner">
+			        <div class="item-title">High power engine run records</div>
+			        <div class="item-after"><span class="badge">5</span></div>
+			     </div>
+			    </a>
+			  </div>
+			  <div class="swipeout-actions-right">
+			    <a href="#" class="add_action bg-orange">Add</a>
+			    <a href="#" class="search_action">Local DB</a>
+                <a href="#" class="search_action_for_remote bg-orange">Remote DB</a>
+			  </div>
+			 </li>
+             <li class="swipeout idle_power_engine_run_records">
+			  <div class="swipeout-content">
+			    <a href="#" class="item-content item-link">
+			      <div class="item-media"><i class="icon icon-f7"></i></div>
+			      <div class="item-inner">
+			        <div class="item-title">Idle power engine run records</div>
+			        <div class="item-after"><span class="badge">5</span></div>
+			     </div>
+			    </a>
+			  </div>
+			  <div class="swipeout-actions-right">
+			    <a href="#" class="add_action bg-orange">Add</a>
+			    <a href="#" class="search_action">Search</a>
+			  </div>
+			 </li>
+             <li class="swipeout rubber_removal">
+			  <div class="swipeout-content">
+			    <a href="#" class="item-content item-link">
+			      <div class="item-media"><i class="icon icon-f7"></i></div>
+			      <div class="item-inner">
+			        <div class="item-title">Rubber removal</div>
+			        <div class="item-after"><span class="badge">5</span></div>
+			     </div>
+			    </a>
+			  </div>
+			  <div class="swipeout-actions-right">
+			    <a href="#" class="add_action bg-orange">Add</a>
+			    <a href="#" class="search_action">Search</a>
+			  </div>
+			 </li>
+             <li class="swipeout runway_sweepers_and_sweeping_daily_mileage">
+			  <div class="swipeout-content">
+			    <a href="#" class="item-content item-link">
+			      <div class="item-media"><i class="icon icon-f7"></i></div>
+			      <div class="item-inner">
+			        <div class="item-title">Runway sweepers and sweeping daily mileage</div>
+			        <div class="item-after"><span class="badge">5</span></div>
+			     </div>
+			    </a>
+			  </div>
+			  <div class="swipeout-actions-right">
+			    <a href="#" class="add_action bg-orange">Add</a>
+			    <a href="#" class="search_action">Search</a>
+			  </div>
+			 </li>
+             <li class="swipeout runway_sweeper_and_sweeping_availability">
+			  <div class="swipeout-content">
+			    <a href="#" class="item-content item-link">
+			      <div class="item-media"><i class="icon icon-f7"></i></div>
+			      <div class="item-inner">
+			        <div class="item-title">Runway sweepers and sweeping Availability</div>
+			        <div class="item-after"><span class="badge">5</span></div>
+			     </div>
+			    </a>
+			  </div>
+			  <div class="swipeout-actions-right">
+			    <a href="#" class="add_action bg-orange">Add</a>
+			    <a href="#" class="search_action">Search</a>
+			  </div>
+			 </li>
+             <li class="swipeout runways_and_taxiways_closure_and_works">
+			  <div class="swipeout-content">
+			    <a href="#" class="item-content item-link">
+			      <div class="item-media"><i class="icon icon-f7"></i></div>
+			      <div class="item-inner">
+			        <div class="item-title">Runways and taxiways closure and works</div>
+			        <div class="item-after"><span class="badge">5</span></div>
+			     </div>
+			    </a>
+			  </div>
+			  <div class="swipeout-actions-right">
+			    <a href="#" class="add_action bg-orange">Add</a>
+			    <a href="#" class="search_action">Search</a>
+			  </div>
+			 </li>
+			</ul>
+		</div>
+        <div class="content-block-title">Monthly</div>
+		<div class="list-block">
+			<ul>
+            <li class="swipeout aircraft_recovery_equipment_maintenance_schedule">
+			  <div class="swipeout-content">
+			    <a href="#" class="item-content item-link">
+			      <div class="item-media"><i class="icon icon-f7"></i></div>
+			      <div class="item-inner">
+			        <div class="item-title">Aircraft recovery equipment maintenance schedule</div>
+			        <div class="item-after"><span class="badge">5</span></div>
+			     </div>
+			    </a>
+			  </div>
+			  <div class="swipeout-actions-right">
+			    <a href="#" class="add_action bg-orange">Add</a>
+			    <a href="#" class="search_action">Search</a>
+			  </div>
+			 </li>
+             <li class="swipeout apron_stand_and_taxilane_monthly_inspection">
+			  <div class="swipeout-content">
+			    <a href="#" class="item-content item-link">
+			      <div class="item-media"><i class="icon icon-f7"></i></div>
+			      <div class="item-inner">
+			        <div class="item-title">Apron stand and taxilane monthly inspection</div>
+			        <div class="item-after"><span class="badge">5</span></div>
+			     </div>
+			    </a>
+			  </div>
+			  <div class="swipeout-actions-right">
+			    <a href="#" class="add_action bg-orange">Add</a>
+			    <a href="#" class="search_action">Search</a>
+			  </div>
+			 </li>
+             <li class="swipeout ground_marking_maintenance_schedule">
+			  <div class="swipeout-content">
+			    <a href="#" class="item-content item-link">
+			      <div class="item-media"><i class="icon icon-f7"></i></div>
+			      <div class="item-inner">
+			        <div class="item-title">Ground Marking Maintenance Schedule</div>
+			        <div class="item-after"><span class="badge">5</span></div>
+			     </div>
+			    </a>
+			  </div>
+			  <div class="swipeout-actions-right">
+			    <a href="#" class="add_action bg-orange">Add</a>
+			    <a href="#" class="search_action">Search</a>
+			  </div>
+			 </li>
+             <li class="swipeout low_visibility_operations_and_drills">
+			  <div class="swipeout-content">
+			    <a href="#" class="item-content item-link">
+			      <div class="item-media"><i class="icon icon-f7"></i></div>
+			      <div class="item-inner">
+			        <div class="item-title">Low visibility operations and drills</div>
+			        <div class="item-after"><span class="badge">5</span></div>
+			     </div>
+			    </a>
+			  </div>
+			  <div class="swipeout-actions-right">
+			    <a href="#" class="add_action bg-orange">Add</a>
+			    <a href="#" class="search_action">Search</a>
+			  </div>
+			 </li>
+             <li class="swipeout stand_degreasing_works_records">
+			  <div class="swipeout-content">
+			    <a href="#" class="item-content item-link">
+			      <div class="item-media"><i class="icon icon-f7"></i></div>
+			      <div class="item-inner">
+			        <div class="item-title">Stand degreasing works records</div>
+			        <div class="item-after"><span class="badge">5</span></div>
+			     </div>
+			    </a>
+			  </div>
+			  <div class="swipeout-actions-right">
+			    <a href="#" class="add_action bg-orange">Add</a>
+			    <a href="#" class="search_action">Search</a>
+			  </div>
+			 </li>
+            </ul>
+          </div>
+        <div class="content-block-title">By Case</div>
+		<div class="list-block">
+			<ul>
+            <li class="swipeout bird_strike_reports">
+			  <div class="swipeout-content">
+			    <a href="#" class="item-content item-link">
+			      <div class="item-media"><i class="icon icon-f7"></i></div>
+			      <div class="item-inner">
+			        <div class="item-title">Bird strike reports</div>
+			        <div class="item-after"><span class="badge">5</span></div>
+			     </div>
+			    </a>
+			  </div>
+			  <div class="swipeout-actions-right">
+			    <a href="#" class="add_action bg-orange">Add</a>
+			    <a href="#" class="search_action">Search</a>
+			  </div>
+			 </li>
+             <li class="swipeout fod_found_records">
+			  <div class="swipeout-content">
+			    <a href="#" class="item-content item-link">
+			      <div class="item-media"><i class="icon icon-f7"></i></div>
+			      <div class="item-inner">
+			        <div class="item-title">FOD found records</div>
+			        <div class="item-after"><span class="badge">5</span></div>
+			     </div>
+			    </a>
+			  </div>
+			  <div class="swipeout-actions-right">
+			    <a href="#" class="add_action bg-orange">Add</a>
+			    <a href="#" class="search_action">Search</a>
+			  </div>
+			 </li>
+             <li class="swipeout markings_painting_works_and_monitoring">
+			  <div class="swipeout-content">
+			    <a href="#" class="item-content item-link">
+			      <div class="item-media"><i class="icon icon-f7"></i></div>
+			      <div class="item-inner">
+			        <div class="item-title">Markings painting works and monitoring </div>
+			        <div class="item-after"><span class="badge">5</span></div>
+			     </div>
+			    </a>
+			  </div>
+			  <div class="swipeout-actions-right">
+			    <a href="#" class="add_action bg-orange">Add</a>
+			    <a href="#" class="search_action">Search</a>
+			  </div>
+			 </li>
+             <li class="swipeout medical_stock_inventory">
+			  <div class="swipeout-content">
+			    <a href="#" class="item-content item-link">
+			      <div class="item-media"><i class="icon icon-f7"></i></div>
+			      <div class="item-inner">
+			        <div class="item-title">Medical stock inventory</div>
+			        <div class="item-after"><span class="badge">5</span></div>
+			     </div>
+			    </a>
+			  </div>
+			  <div class="swipeout-actions-right">
+			    <a href="#" class="add_action bg-orange">Add</a>
+			    <a href="#" class="search_action">Search</a>
+			  </div>
+			 </li>
+             <li class="swipeout response_time_keeping">
+			  <div class="swipeout-content">
+			    <a href="#" class="item-content item-link">
+			      <div class="item-media"><i class="icon icon-f7"></i></div>
+			      <div class="item-inner">
+			        <div class="item-title">Response time keeping</div>
+			        <div class="item-after"><span class="badge">5</span></div>
+			     </div>
+			    </a>
+			  </div>
+			  <div class="swipeout-actions-right">
+			    <a href="#" class="add_action bg-orange">Add</a>
+			    <a href="#" class="search_action">Search</a>
+			  </div>
+			 </li>
+            </ul>
+          </div>
+        </div>
+    </div>
+</script>
+<script id="high_power_engine_run_records-form-tpl" type="text/template7">
+ 	<div class="navbar bg-bar">
+		<div class="navbar-inner">
+		    <div class="left">
+	            <a href="#" class="link icon-only">
+	                <i class="icon icon-logo"></i>
+	            </a>
+	        </div>
+			<div class="center white">High Power Engine Run Records</div>
+            <div class="right">
+                <a href="#" class="link icon-only tab-link" data-tab="#airfield-view"> <i class="icon icon-back"></i></a>
+            </div>
+		</div>
+	</div>
+	
+	<div class="page-content content" >
+	<div id="high_power_engine_run_records" data-page="high_power_engine_run_records">
+	<form class="input-form">
+				<div class="list-block">
+					<ul>
+						<li class="item-content">
+							<div class="item-inner">
+								<div class="item-title label">Record No.</div>
+								<div class="item-input">
+									<input type="text" name="record_no" class="record_no" placeholder="Record No." />
+								</div>
+							</div>
+						</li>
+						<li class="item-content">
+							<div class="item-inner">
+								<div class="item-title label">Start Date</div>
+								<div class="item-input">
+									<input type="text" name="start_date" class="start_date" placeholder="Start Date" />
+								</div>
+							</div>
+						</li>
+						<li class="item-content">
+							<div class="item-inner">
+								<div class="item-title label">Start Time</div>
+								<div class="item-input">
+									<input type="text" name="start_time" class="start_time"
+										placeholder="Start Time" />
+								</div>
+							</div>
+						</li>
+						<li class="item-content">
+							<div class="item-inner">
+								<div class="item-title label">End Date</div>
+								<div class="item-input">
+									<input type="text" name="end_date" class="end_date"
+										placeholder="End Date" />
+								</div>
+							</div>
+						</li>
+						<li class="item-content">
+							<div class="item-inner">
+								<div class="item-title label">End Time</div>
+								<div class="item-input">
+									<input type="text" name="end_time" class="end_time"
+										placeholder="End Time" />
+								</div>
+							</div>
+						</li>
+						<li class="item-content">
+							<div class="item-inner">
+								<div class="item-title label">Operator</div>
+								<div class="item-input">
+									<input type="text" name="operator_code" class="operator_code" 
+										placeholder="Operator Code" />
+								</div>
+							</div>
+						</li>
+						<li class="item-content">
+							<div class="item-inner">
+								<div class="item-title label">A/C Type</div>
+								<div class="item-input">
+									<input type="text" name="aircraft_type_code" class="aircraft_type_code"
+										placeholder="A/C Type" />
+								</div>
+							</div>
+						</li>
+						<li class="item-content">
+							<div class="item-inner">
+								<div class="item-title label">Reg.</div>
+								<div class="item-input">
+									<input type="text" name="registration_mark" class="registration_mark"
+										placeholder="Reg." />
+								</div>
+							</div>
+						</li>
+						<li class="item-content">
+							<div class="item-inner">
+								<div class="item-title label">Engine Made</div>
+								<div class="item-input">
+									<input type="text" name="engine_made" class="engine_made"
+										placeholder="Engine Made" />
+								</div>
+							</div>
+						</li>
+						<li class="item-content">
+							<div class="item-inner">
+								
+								<div class="item-input">
+
+<a href="#" class="item-link smart-select engine_no">
+        <select name="engine_no" multiple>
+          <optgroup label="Available values">
+          </optgroup>
+        </select>
+
+          <div class="item-inner">
+            <div class="item-title">Engine No.</div>
+            <div class="item-after"></div>
+          </div>
+</a>
+
+								</div>
+							</div>
+						</li>
+						<li class="item-content">
+							<div class="item-inner">
+								<div class="item-title label">Engine Power(%)</div>
+								<div class="item-input">
+									<input type="text" name="engine_power" class="engine_power"
+										placeholder="x%" />
+								</div>
+							</div>
+						</li>
+					    <li class="item-content">
+							<div class="item-inner">
+								<div class="item-title label">Result</div>
+								<div class="item-input">
+									<input type="text" name="result_code" class="result_code" placeholder="Result" />
+								</div>
+							</div>
+						</li>
+					    <li class="item-content">
+							<div class="item-inner">
+								<div class="item-title label">Company</div>
+								<div class="item-input">
+									<input type="text" name="company" class="company" placeholder="Company" />
+								</div>
+							</div>
+						</li>
+			            <li class="item-content">
+							<div class="item-inner">
+								<div class="item-title label">Permit No.</div>
+								<div class="item-input">
+									<input type="text" name="engineer_permit_no" class="engineer_permit_no" placeholder="Permit No." />
+								</div>
+							</div>
+						</li>
+			            <li class="item-content">
+							<div class="item-inner">
+								<div class="item-title label">Remarks</div>
+								<div class="item-input">
+									<input type="text" name="remarks" class="remarks" placeholder="Remarks"/>
+								</div>
+							</div>
+						</li>
+			            <li class="item-content">
+							<div class="item-inner">
+								<div class="item-title label">Attachment</div>
+								<div class="item-input">
+									<input type="file" name="attachment" class="attachment" />
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="list-block">
+					<a href="#" class="button button-fill color-teal save">Save</a>
+				</div>
+			</form>
+	</div>
+	</div>
+</script>
+<script id="high_power_engine_run_records-list-tpl" type="text/template7">
+ <div class="navbar bg-bar">
+    <div class="navbar-inner">
+    <div class="left">
+           <a href="#" class="link icon-only">
+               <i class="icon icon-logo"></i>
+           </a>
+       </div>
+      <div class="center white">High Power Engine Run Records</div>
+      <div class="right">
+         <a href="#" class="link icon-only tab-link" data-tab="#airfield-view"> <i class="icon icon-back"></i></a>
+      </div>
+    </div>
+</div>
+
+<form data-search-list=".list-block-search" data-search-in=".item-title" class="searchbar searchbar-init">
+    <div class="searchbar-input">
+      <input type="search" placeholder="Search"><a href="#" class="searchbar-clear"></a>
+    </div><a href="#" class="searchbar-cancel">Cancel</a>
+  </form>
+<div class="searchbar-overlay"></div>
+
+<div class="page-content pull-to-refresh-content" >
+    <div class="content-block searchbar-not-found">
+      <div class="content-block-inner">Nothing found</div>
+    </div>
+  <div class="pull-to-refresh-layer">
+    <div class="preloader"></div>
+    <div class="pull-to-refresh-arrow"></div>
+  </div>
+
+  <div class="list-block media-list list-block-search searchbar-found">
+    <ul>
+    </ul>
+    <div class="list-block-label">
+      <p>Just pull page down to let the magic happen.</p>
+    </div>
+  </div>
+  
+</div> 
+</script>
+  </body>
+</html>

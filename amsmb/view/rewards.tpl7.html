@@ -1,0 +1,14 @@
+{{#each rewards}}
+<li><a class="item-link item-content tab-link"
+	onclick="toRewardDetail('{{PromotionDetailID}}','{{couponCode}}','{{PromotionName}}','{{GiftPackageName}}')" data-tab="#detail-view">
+		<div class="item-media">
+			<img src="../view/images/deal.png" width="44" />
+		</div>
+		<div class="item-inner">
+			<div class="item-title-row">
+				<div class="item-title">{{PromotionName}}</div>
+			</div>
+			<div class="item-subtitle">{{GiftPackageName}}</div>
+		</div>
+</a></li>
+{{/each}}   

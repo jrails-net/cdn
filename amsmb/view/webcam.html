@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="jquery-3.1.1.min.js"></script>
+    <title>Sanp Photo</title>
+    <script>
+
+    </script>
+</head>
+<body>
+<input id="the-file-input" type="file">
+<div id="some_container_div"></div>
+ <canvas id="canvas" width=100 height=100></canvas>
+</body>
+<script>
+
+function getImageOfZoom(imageFile,zoom,chagneCallback) {
+  var reader = new FileReader();
+  reader.onload = function(event) {
+    the_url = event.target.result
+    var image = new Image();
+    image.onload = function() {
+      var canvas=document.createElement("canvas");
+      var ctx=canvas.getContext("2d");
+      canvas.width=image.width*zoom;
+      canvas.height=image.height*zoom;
+      ctx.drawImage(image,0,0,image.width,image.height,0,0,canvas.width,canvas.height);
+  
+      chagneCallback({name: imageFile.name,
+                      size:imageFile.size,
+                      type: imageFile.type,
+                      width:canvas.width,
+                      height: canvas.height,
+                      data: canvas.toDataURL()});
+    };
+    image.src = the_url;
+  }
+  reader.readAsDataURL(imageFile);
+}
+
+function getImageOfWidth(imageFile,targetWidth,chagneCallback) {
+  var reader = new FileReader();
+  reader.onload = function(event) {
+    the_url = event.target.result
+    var image = new Image();
+    image.onload = function() {
+      var canvas=document.createElement("canvas");
+      var ctx=canvas.getContext("2d");
+      var zoom = targetWidth/image.width;
+      console.log("zoom",zoom);
+      canvas.width=image.width*zoom;
+      canvas.height=image.height*zoom;
+      ctx.drawImage(image,0,0,image.width,image.height,0,0,canvas.width,canvas.height);
+      chagneCallback({name: imageFile.name,
+                      size:imageFile.size,
+                      type: imageFile.type,
+                      width:canvas.width,
+                      height: canvas.height,
+                      data: canvas.toDataURL()});
+    };
+    image.src = the_url;
+  }
+  reader.readAsDataURL(imageFile);
+}
+ 
+function test(img){
+	console.log(img.data);
+} 
+// handle input changes
+$("#the-file-input").change(function() {
+    this.files;
+   // console.log("test",this.files[0]);
+   var data = getImageOfWidth(this.files[0],51.0,test);
+});
+		
+</script>
+</html>
+
+<!-- 
+// convert image to localstorage friendly data URL string
+function getImageDataURL(img) {
+  var canvas = document.createElement('canvas');
+  canvas.width = img.width;
+  canvas.height = img.height;
+  var context = canvas.getContext('2d');
+  context.drawImage(img, 0, 0);
+  var dataURL = canvas.toDataURL('image/png');
+  return dataURL;
+}
+
+var image = new Image();
+image.onload = function() {
+  var dataURL = getImageDataURL(image);
+  document.body.innerHTML = dataURL;
+  image.src = dataURL;
+  document.body.appendChild(image);
+};
+image.crossOrigin = 'anonymous';
+image.src = '//placekitten.com/g/120/120';
+
+ -->

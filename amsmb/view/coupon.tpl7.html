@@ -1,0 +1,28 @@
+
+<div class="navbar bg-bar">
+	<div class="navbar-inner">
+		<div class="left">
+			<a href="#" class="link icon-only tab-link" data-tab="#coupons-view"> <i class="icon icon-back"></i>
+			</a>
+		</div>
+		<div class="right padding-right-10 white">Detail</div>
+	</div>
+</div>
+
+<div class="title" >
+  Scan Waiting
+</div>  
+
+<div class="page-content content" >
+
+	<div class="center" >	
+		<p class="nameOfCoupon">{{nameOfCoupon}}</p>
+		<p class="valueAmount">$ {{js "Sugar.Number.format(parseFloat(this.valueAmount),2)"}}</p>
+		 <img alt="" src="{{url}}generateQRCode.jsp?c={{couponCode}}&m={{memberID}}&s={{shopID}}"}}">
+	</div>
+
+	<div class="bottom" >
+
+	</div>
+
+</div>

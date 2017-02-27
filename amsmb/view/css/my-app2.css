@@ -1,0 +1,382 @@
+/* Your app custom files in this file */
+    
+.white {
+  color: #FFFFFF;	
+}
+
+#login {
+	padding-top: 8px;
+	padding-bottom: 8px;
+  	background-color: #005361;
+}
+
+#login .header {
+	background-color: #F7F7F7;
+	width: 100%;
+	height: 58px;
+	background-image: url(../images/logo.png);
+	background-repeat: no-repeat;
+}
+
+#login .sing_in {
+	padding-top: 10px;
+	font-size: 20px;
+	width: 100%;
+	height: 50px;
+	margin: auto;
+}
+
+#login .forgot_pwd {
+	padding-left: 20px;
+}
+
+.bg-bar,.list-block .swipeout-actions-left a.bg-teal,.list-block .swipeout-actions-right a.bg-teal
+	{
+	background-color: #005361;
+}
+
+.page-html-content {
+	padding-top: 70px;
+	padding-left: 10px;
+}
+
+.tabbar {
+	height: 66px;
+}
+
+.padding-right-10 {
+	padding-right: 10px;
+}
+
+
+#discipline-view .content{
+	padding-top: 20px;
+}
+
+
+#discipline-view .save {
+	height: 50px;
+	font-size: 20px;
+	padding-top: 10px;
+	vertical-align:middle;
+	align:middle;
+}
+
+#account-view .top {
+	height: auto;
+	height: 160px;
+}
+
+#account-view .content{
+	padding-top: 20px;
+}
+
+#account-view .top .left {
+	padding-left: 20px;
+	padding-top: 30px;
+}
+
+#account-view .top .right {
+	width: 200px;
+	float: right;
+}
+
+#account-view .top .right .info {
+	padding-top: 70px;
+	padding-left: 10px;
+}
+
+#account-view .top .right .info p {
+	line-height: 5px;
+}
+
+#account-view .center {
+	padding-top: 6px;
+	background: #128a9e;
+	height: 70px;
+	text-align: center;
+	background: #128a9e;
+}
+
+#account-view .center .info {
+	color: #FFFFFF;
+	font-size: 15px;
+	line-height: 0px;
+}
+
+#account-view .center hr {
+	border: 0;
+	height: 1px;
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #FFFFFF,
+		rgba(0, 0, 0, 0) );
+}
+
+#account-view .bottom  {
+	justify-content: center;
+	display: flex;
+	width: 100%;
+	height: 200px;
+	margin: auto;
+}
+
+#account-view .bottom .buttons-row {
+	width: 250px;
+}
+
+#account-view .bottom .buttons-row .coupans {
+	border: none;
+    border: 0;
+	height: 120px;
+	width: 120px;
+	background-image: url(../images/coupons.png);
+	background-repeat: no-repeat;
+}
+
+#account-view .bottom .buttons-row .history {
+	border: none;
+    border: 0;
+	height: 120px;
+	width: 120px;
+	background-image: url(../images/history.png);
+	background-repeat: no-repeat;
+}
+
+#coupons-view .title {
+	padding-left: 10px;
+	padding-bottom: 3px;
+	height: 20px;
+	text-align: left;
+	background: #128a9e;
+	color: #FFFFFF;
+}
+
+
+#buy-view .title {
+	padding-left: 10px;
+	padding-bottom: 3px;
+	height: 20px;
+	text-align: left;
+	background: #128a9e;
+	color: #FFFFFF;
+}
+
+#coupon-view .title {
+	padding-left: 10px;
+	padding-bottom: 3px;
+	height: 20px;
+	text-align: left;
+	background: #128a9e;
+	color: #FFFFFF;
+}
+
+#coupon-view .content{
+	background: #C9F1FD;
+	text-align: center;
+	width: 100%;
+}
+
+#coupon-view .content{
+	background: #C9F1FD;
+	text-align: center;
+	width: 100%;
+}
+
+#coupon-view .content .center {
+	padding-top: 10px;
+	background: #FFFFFF;
+	text-align: center;
+	width: 80%;
+	vertical-align:middle;
+	margin: auto;
+	height: 280px;
+}
+
+
+#coupon-view .content .center p {
+	color: #000000;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 5px;
+}
+
+
+#coupon-view .content .center img {
+	padding-bottom: 20px;
+}
+
+#detail-view .title {
+	padding-top: 18px;
+	background: #128a9e;
+	height: 70px;
+	text-align: center;
+	background: #128a9e;
+}
+
+#detail-view .title .info {
+	color: #FFFFFF;
+	font-size: 15px;
+	line-height: 0px;
+}
+
+#detail-view .title hr {
+	border: 0;
+	height: 1px;
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #FFFFFF,
+		rgba(0, 0, 0, 0) );
+}
+
+#detail-view .center {
+	text-align: center;
+	padding-top: 10px;
+}
+
+#detail-view .center .icon {
+	height: 106px;
+	width: 243px;
+	margin: auto;
+	background-image: url(../images/coupon.png);
+	background-repeat: no-repeat;
+}
+
+#detail-view .center .name {
+	color: #000000;
+	font-size: 28px;
+	line-height: 10px;
+}
+
+#detail-view .center .poins {
+	color: red;
+	font-size: 22px;
+	line-height: 10px;
+}
+
+#detail-view .bottom {
+	height: 100px;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 100px;
+	width: 70%;
+	margin: auto;
+	height: 200px;
+}
+
+#detail-view .bottom .redeem {
+	height: 50px;
+	font-size: 20px;
+	padding-top: 10px;
+	vertical-align:middle;
+}
+
+#detail-view .content {
+
+}
+
+#history-view .title {
+	padding-left: 10px;
+	padding-bottom: 3px;
+	height: 20px;
+	text-align: left;
+	background: #128a9e;
+	color: #FFFFFF;
+}
+
+i.icon-logo {
+	width: 28px;
+	height: 28px;
+	background-image: url(../images/icon_logo.png);
+}
+
+i.tabbar-account-icon {
+	width: 24px;
+	height: 24px;
+	background-image: url(../images/account-24.png);
+}
+
+.active i.tabbar-account-icon {
+	width: 32px;
+	height: 32px;
+	background-image: url(../images/account-32.png);
+}
+
+i.tabbar-home-icon {
+	width: 24px;
+	height: 24px;
+	background-image: url(../images/home-24.png);
+}
+
+.active i.tabbar-home-icon {
+	width: 32px;
+	height: 32px;
+	background-image: url(../images/home-32.png);
+}
+
+i.tabbar-airfield-icon {
+	width: 24px;
+	height: 24px;
+	background-image: url(../images/airfield-24.png);
+}
+
+.active i.tabbar-airfield-icon {
+	width: 32px;
+	height: 32px;
+	background-image: url(../images/airfield-32.png);
+}
+
+i.tabbar-discipline-icon {
+	width: 24px;
+	height: 24px;
+	background-image: url(../images/discipline-24.png);
+}
+
+.active i.tabbar-discipline-icon {
+	width: 32px;
+	height: 32px;
+	background-image: url(../images/discipline-32.png);
+}
+
+i.tabbar-coupons-icon {
+	width: 24px;
+	height: 24px;
+	background-image: url(../images/gift-24.png);
+}
+
+.active i.tabbar-coupons-icon {
+	width: 32px;
+	height: 32px;
+	background-image: url(../images/gift-32.png);
+}
+
+i.tabbar-buy-icon {
+	width: 24px;
+	height: 24px;
+	background-image: url(../images/buy-24.png);
+}
+
+.active i.tabbar-buy-icon {
+	width: 32px;
+	height: 32px;
+	background-image: url(../images/buy-32.png);
+}
+
+.item-title2 {
+  @extend .item_title;
+  /*margin-top:-20px;*/
+  /*margin-top:-20px;*/
+  /*margin-bottom:10px;*/
+  vertical-align:middle;
+  white-space:normal;
+}
+
+.item-title2 p {
+  line-height: 100%;
+  vertical-align: middle;
+  margin:0;
+}
+
+.save {
+  padding-top: 10px;
+  font-size: 20px;
+  width: 100%;
+  height: 50px;
+  margin: auto;
+}
